@@ -1,7 +1,15 @@
-import { Notifier, Ledger, JSON } from '@klave/sdk';
+import { Notifier, Ledger, JSON, Crypto } from '@klave/sdk';
 import { FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage } from './types';
 
 const myTableName = "my_storage_table";
+
+/**
+ * @query
+ */
+export function ping(): void {
+    Notifier.sendString("pong1");
+    Notifier.sendString("pong2");
+}
 
 /**
  * @query
